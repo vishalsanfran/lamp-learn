@@ -12,7 +12,7 @@ function showImages() {
     while ($filesInFolder->valid()) {
     	$file = $filesInFolder->current();
     	$fileName = $file->getFileName();
-    	$src = "$folder/$filename";
+    	$src = "$folder/$fileName";
     	$fileInfo = new Finfo( FILEINFO_MIME_TYPE );
     	$mimeType = $fileInfo->file( $src );
 
@@ -24,5 +24,5 @@ function showImages() {
     }
 
     $out .= "</ul>";
-	return $out
+	return $out;
 }
